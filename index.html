@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>
+      My Game
+    </title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+    <script src="./questions.js"></script>
+  </head>
+  <body>
+    <a-scene id="scene">
+        <a-entity id="environment" environment="preset: forest; skyType:gradient; lighting:point"> 
+        </a-entity> 
+        <a-assets>
+        <a-asset-item id = "tower" src = "./assets/scene.gltf">
+        </a-asset-item>
+        </a-assets>
+        <a-entity id = "tower-model" gtlf-model = "#tower" position = "0 0 -10" rotation = "0 0 0" scale = "100 100 100" Questions>
+        </a-entity>
+    </a-scene>
+  </body>
+</html>

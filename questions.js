@@ -1,0 +1,15 @@
+AFRAME.registerComponent("Questions", 
+{init: function(){
+  posX = Math.floor(Math.random()*3000 + -1000)
+  posY = Math.floor(Marh.random()*2 + - 1)
+  posZ = Math.floor(Math.random()*3000 + -1000)
+  box = document.querySelector("#scene")
+  box.setAttribute("id", "Question 1")
+  box.setAttribute("position",{x: posX, y: posY, z: posZ})
+  box.setAttribute("geometry",{primitive: "rectangle", width: 50, height: 10})
+  box.setAttribute("material","color","red")
+  questionBox = document.createElement("a=entity")
+  questionBox.setAttribute("position", {x: 0, y: 0, z: 0})
+  questionBox.setAttribute("text", {font: "exo2bold", width: 5, value: "2 + 5 ="})
+  box.appendChild(questionBox)
+}})
